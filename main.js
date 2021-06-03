@@ -42,7 +42,7 @@ window.addEventListener("keydown", my_keydown);
 
 function my_keydown (e)
 {
-    keyPressed = e.keycode;
+    keyPressed = e.keyCode;
     console.log (keyPressed) ;
     if(keyPressed == '38')
     {
@@ -91,27 +91,32 @@ function car1_up(){
         car1_y=car1_y-10;
         uploadbg();
         uploadcar1();
+        uploadcar2();
+
     }
 }
-function down(){
+function car1_down(){
     if(car1_y<=500){
         car1_y=car1_y+10;
         console.log(car1_y);
         uploadbg();
         uploadcar1();
+        uploadcar2();
     }
 }
-function left(){
+function car1_left(){
     if(car1_x>=0){
         car1_x=car1_x-10;
         uploadbg();
         uploadcar1();
+        uploadcar2();
     }
 }
-function right(){
+function car1_right(){
     if(car1_x<=700){
         car1_x=car1_x+10;
         uploadbg();
-        uploadcar1_();
+        uploadcar1();
+        uploadcar2();
     }
 }
